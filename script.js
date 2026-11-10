@@ -89,7 +89,7 @@ function makeSword() {
     if (heat >= 30) {
         swordsMade++
         heat -= 30
-        messageElement.textContent = "Sword forged!"
+        messageElement.textContent = ""
         updateForge()
     } else {
         messageElement.textContent = "Not enough heat to forge a sword."
@@ -99,3 +99,48 @@ function makeSword() {
 // 8. Call resetForge() once to start the game.
 
 // Use the tests in ASSIGNMENT.md to check your work.
+
+
+const heatInput = document.getElementById("heat-input");
+const heatButton = document.getElementById("heat-button");
+
+
+heatButton.addEventListener("click", function() {
+    const amount = Number(heatInput.value);
+    if (
+        heatInput.value === "" ||
+        !Number.isFinite(amount) ||
+        !Number.isInteger(amount) ||
+        amount <= 0
+    ) {
+        messageElement.textContent = "Please enter a positive whole number."
+        return
+    }
+
+    heatForge(amount)
+    messageElement.textContent = "Heat added successfully!"
+
+    heatForge(amount);
+    messageElement.textContent = "Heat added successfully!";
+
+    
+})
+
+
+const swordButton = document.getElementById("make-sword");
+
+swordButton.addEventListener("click", function() {
+    makeSword();
+});
+
+const resetButton = document.getElementById("reset-forge");
+
+resetButton.addEventListener("click", function() {
+    resetForge();
+});
+
+
+
+
+
+
