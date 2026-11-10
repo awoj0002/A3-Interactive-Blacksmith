@@ -35,10 +35,23 @@
       <aside aria-label="Game instructions">
         <section class="panel">
           <h2>Forge Controls</h2>
-            <div id= "content">
+            <div id= "heat">
               <h3>Heat to add</h3>
+              <input id="note" name="note" required maxlength="200" autocomplete="off">
+                    <button type="submit">Add heat</button>
               <p>Enter a positive whole number. Maximum forge heat: 100.</p>
             </div>
+
+            <div id= "sword">
+              <button type="submit">Make Sword</button>
+              <p>Use 30 heat to make one sword.</p>
+            </div>
+
+            <div id= "reset">
+              <button type="submit">Reset Forge</button>
+              <p>Return 20 heat and zero swords</p>
+            </div>
+            
           <!-- <h2>Console commands</h2>
           <p>Write each function in <code>script.js</code>, then try it in the browser console.</p>
           <dl>
