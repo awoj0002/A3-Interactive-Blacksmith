@@ -100,6 +100,22 @@ function makeSword() {
 
 // Use the tests in ASSIGNMENT.md to check your work.
 
+// user clicks "add heat"
+// fetches number in the heat input
+// checks if the input is a positive whole number
+// invalid input displays error message
+// otherwise, ass heat to forge
+// display success message
+
+// user clicks "make sword"
+// checks if there's at least 30 heat
+// if there is enough heat subtract 30 and add 1 sword
+// display error message if invalid
+
+// user clicks reset forge
+// set heat back to 20
+// set sword count back to 0
+// update forge display
 
 const heatInput = document.getElementById("heat-input");
 const heatButton = document.getElementById("heat-button");
@@ -118,12 +134,7 @@ heatButton.addEventListener("click", function() {
     }
 
     heatForge(amount)
-    messageElement.textContent = "Heat added successfully!"
-
-    heatForge(amount);
-    messageElement.textContent = "Heat added successfully!";
-
-    
+    messageElement.textContent = "Heat added successfully!" 
 })
 
 
@@ -131,13 +142,13 @@ const swordButton = document.getElementById("make-sword");
 
 swordButton.addEventListener("click", function() {
     makeSword();
-});
+})
 
 const resetButton = document.getElementById("reset-forge");
 
 resetButton.addEventListener("click", function() {
     resetForge();
-});
+})
 
 
 
