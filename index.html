@@ -36,19 +36,22 @@
         <section class="panel">
           <h2>Forge Controls</h2>
             <div id= "heat">
-              <h3>Heat to add</h3>
-              <input id="note" name="note" required maxlength="200" autocomplete="off">
-                    <button type="submit">Add heat</button>
-              <p>Enter a positive whole number. Maximum forge heat: 100.</p>
+              <form id="heat-form"></form>
+                <h2>Heat to add</h2>
+                <label for="heat-input"></label>
+                <input type="number" id="heat-input" name="heat" min="1" step="1">
+                      <button type="submit" id="heat-button">Add heat</button>
+                <p>Enter a positive whole number. Maximum forge heat: 100.</p>
+              </form>
             </div>
 
             <div id= "sword">
-              <button type="submit">Make Sword</button>
+              <button type="submit" id="make-sword">Make Sword</button>
               <p>Use 30 heat to make one sword.</p>
             </div>
 
             <div id= "reset">
-              <button type="submit">Reset Forge</button>
+              <button type="button" id="reset-forge">Reset Forge</button>
               <p>Return 20 heat and zero swords</p>
             </div>
             
